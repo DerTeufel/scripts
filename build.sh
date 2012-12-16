@@ -7,11 +7,12 @@ build ()
     echo "Building for $target"
 	rm -fr out/target/product/"$target"/system
 	rm -fr out/target/product/"$target"/*.zip
-    if [ "$target" = "captivatemtd" || "$target" = "fascinatemtd" || "$target" = "galaxysmtd" || "$target" = "vibrantmtd" ] ; then
+    if [ "$target" = "captivatemtd" ] || [ "$target" = "fascinatemtd" ] || [ "$target" = "galaxysmtd" ] || [ "$target" = "vibrantmtd" ] ; then
 	cd bootable/recovery && git checkout devil_touch2
     else
 	cd bootable/recovery && git checkout cm-10.1
     fi
+	cd ~/android/android*
 	
     . build/envsetup.sh && brunch $target
 #    scp ~/android/android4.2/out/target/product/$target/Helly*.zip derteufel@ftp.andromirror.com:/hb42-$target
