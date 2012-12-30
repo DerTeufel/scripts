@@ -20,7 +20,7 @@ build ()
     
 targets=("$@")
 if [ 0 = "${#targets[@]}" ] ; then
-    targets=(captivatemtd fascinatemtd galaxysmtd galaxysbmtd vibrantmtd crespo i9100 i9300 d2att d2spr i777)
+    targets=(captivatemtd fascinatemtd galaxysmtd galaxysbmtd vibrantmtd crespo crespo4g i9100 i777 i9300 d2att d2spr n7000 n7100)
 fi
 
 START=$(date +%s)
